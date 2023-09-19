@@ -1,0 +1,257 @@
+@import url("./font/stylesheet.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Roboto";
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .keyboard {
+  background-color: #5B5D72;
+  padding: 14px;
+  border-radius: 5px;
+}
+.container .keyboard > div > div:hover {
+  cursor: pointer;
+}
+.container .keyboard .selected {
+  background: rgb(255, 92, 0);
+  background: linear-gradient(133deg, rgb(255, 92, 0) 35%, rgb(160, 52, 5) 100%);
+}
+.container .keyboard .rowf {
+  display: grid;
+  grid-template-columns: repeat(14, 60px);
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.container .keyboard .rowf > div {
+  border-radius: 5px;
+  background: linear-gradient(135deg, #1A1C28 0%, #05060B 100%);
+  color: white;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .keyboard .rown {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(13, 60px) 86px;
+  height: 60px;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+}
+.container .keyboard .rown .delete {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px 15px;
+}
+.container .keyboard .rown > div {
+  border-radius: 5px;
+  background: linear-gradient(135deg, #1A1C28 0%, #05060B 100%);
+  color: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .keyboard .rowl1 {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 86px repeat(13, 60px);
+  height: 60px;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+}
+.container .keyboard .rowl1 .tab {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 10px 15px;
+}
+.container .keyboard .rowl1 > div {
+  border-radius: 5px;
+  background: linear-gradient(135deg, #1A1C28 0%, #05060B 100%);
+  color: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .keyboard .rowl2 {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 104px repeat(11, 60px) 105px;
+  height: 60px;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+}
+.container .keyboard .rowl2 .green-dot {
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+  background-color: gray;
+}
+.container .keyboard .rowl2 .caps-lock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 15px;
+}
+.container .keyboard .rowl2 > div {
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .keyboard .rowl2 > div:not(.selected) {
+  background: linear-gradient(135deg, #1A1C28 0%, #05060B 100%);
+}
+.container .keyboard .rowl2 .return {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px 15px;
+}
+.container .keyboard .rowl3 {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 136px repeat(10, 60px) 136px;
+  height: 60px;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+}
+.container .keyboard .rowl3 > div {
+  border-radius: 5px;
+  background: linear-gradient(135deg, #1A1C28 0%, #05060B 100%);
+  color: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .keyboard .rowl3 .shift,
+.container .keyboard .rowl3 .lshift {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 15px;
+}
+.container .keyboard .rowl3 .shift {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.container .keyboard .rowl3 .lshift {
+  justify-content: flex-end;
+}
+.container .keyboard .last-row {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 60px) 70px 315px 70px 60px 190px;
+  height: 60px;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+}
+.container .keyboard .last-row > div:not(.arrows) {
+  background: linear-gradient(135deg, #1A1C28 0%, #05060B 100%);
+}
+.container .keyboard .last-row > div {
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6px 15px;
+}
+.container .keyboard .last-row .fn {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.container .keyboard .last-row .control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .keyboard .last-row .control div:first-child {
+  width: 100%;
+  text-align: right;
+}
+.container .keyboard .last-row .option1,
+.container .keyboard .last-row .option2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .keyboard .last-row .option1 div:first-child,
+.container .keyboard .last-row .option2 div:first-child {
+  width: 100%;
+  text-align: right;
+}
+.container .keyboard .last-row .command1,
+.container .keyboard .last-row .command2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .keyboard .last-row .command1 div:first-child,
+.container .keyboard .last-row .command2 div:first-child {
+  width: 100%;
+  text-align: right;
+}
+.container .keyboard .last-row .option2 div:first-child,
+.container .keyboard .last-row .command2 div:first-child {
+  text-align: left;
+}
+.container .keyboard .last-row .arrows {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 5px;
+}
+.container .keyboard .last-row .arrows .none {
+  visibility: hidden;
+}
+.container .keyboard .last-row .arrows > div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  height: 23.3333333333px;
+}
+.container .keyboard .last-row .arrows > div > div {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1A1C28 0%, #05060B 100%);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .keyboard .last-row .arrows .arrowleft {
+  transform: rotateZ(270deg);
+}
+.container .keyboard .last-row .arrows .arrowdown {
+  transform: rotateZ(180deg);
+}
+.container .keyboard .last-row .arrows .arrowright {
+  transform: rotateZ(90deg);
+}/*# sourceMappingURL=style.css.map */
